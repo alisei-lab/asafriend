@@ -66,10 +66,20 @@ export default {
       const first = this.lettori.shift();
       this.lettori.push(first);
     },
-    saveNcopy: function () {
+    saveNcopy: async function () {
       const storage = window.localStorage;
       const parsedData = JSON.stringify(this.lettori);
+      storage.removeItem("khatma");
       storage.setItem("khatma", parsedData);
+
+      let textToBeCopied = [];
+
+      this.lettori.forEach((persona, index) => {
+        textToBeCopied.push(`*${index + 1}* ${persona.nome}\n`);
+      });
+      await window.navigator.clipboard.writeText("");
+      await window.navigator.clipboard.writeText(textToBeCopied.join(""));
+      console.log("copied!");
     },
   },
 };

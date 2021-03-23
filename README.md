@@ -1,19 +1,26 @@
-# asafriend
+# As a Friend
+A little app to help my wife organize her weekly khatma group, it does only rotate ahzab between each member, save the array locally and copies it formatted for whatsapp into the clipboard using html api.
 
-## Project setup
+# Project
+If it fits your needs feel free to use it.
+```
+git clone https://github.com/alisei-lab/asafriend.git asafriend
+```
+Get into the folder:
+```
+cd asafriend
+```
+Install dependencies
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+Run dev server:
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
+Build it:
 ```
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Eventually, if you need any kind of help, feel free to contact me.
